@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .home-button {
+            background-color: #0b0b0b;
+            color: #1bf481;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .home-button:hover {
+            background-color: #656262;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+    <div class="container">
+        <table id="services-table">
+            <thead>
+                <tr>
+                    <th>Service ID</th>
+                    <th>Date</th>
+                    <th>Duration</th>
+                    <th>Type of Service</th>
+                    <th>Availability</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2024-05-01</td>
+                    <td>2 hours</td>
+                    <td>Consultation</td>
+                    <td>Available</td>
+                    <td><button onclick="editService(1)">Edit</button> <button onclick="deleteService(1)">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2024-05-02</td>
+                    <td>1.5 hours</td>
+                    <td>Technical Support</td>
+                    <td>Not Available</td>
+                    <td><button onclick="editService(2)">Edit</button> <button onclick="deleteService(2)">Delete</button></td>
+                </tr>
+                <!-- Add more rows for additional services -->
+            </tbody>
+        </table>
+        <a href="manager dashboard.html" class="home-button">Back Home</a>
+    </div>
+
+    <script>
+        function editService(serviceId) {
+            // Redirect to edit service page with the service ID
+            window.location.href = 'edit_service.html?id=' + serviceId;
+        }
+
+        function deleteService(serviceId) {
+            // Implement delete functionality here
+            alert('Delete service with ID ' + serviceId);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .reply-btn {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reply-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>View Feedback</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feedback ID</th>
+                    <th>Customer Name</th>
+                    <th>Feedback</th>
+                    <th>Admin Reply</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jean Mugabo</td>
+                    <td>Great service, very satisfied!</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Kubwimana</td>
+                    <td>Could improve response time.</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Michael Ishimwe</td>
+                    <td>Excellent support, quick resolution!</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Aline Nishimwe</td>
+                    <td>Polite staff, but could be more knowledgeable.</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Judith kabanda</td>
+                    <td>Excellent service overall, no complaints!</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Emma Abayo</td>
+                    <td>Could be more responsive during peak hours.</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Cloude sinzi</td>
+                    <td>Quick turnaround, but billing errors occurred.</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Olivier Ishimwe</td>
+                    <td>Issues resolved promptly, very satisfied!</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Frank Admson</td>
+                    <td>Great job on handling my query!</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Ava Thomas</td>
+                    <td>Improvements needed in product packaging.</td>
+                    <td contenteditable="true"></td>
+                    <td><button class="reply-btn" onclick="replyToFeedback(this)">Reply</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function replyToFeedback(button) {
+            var row = button.parentNode.parentNode;
+            var feedbackCell = row.cells[2].innerText;
+            var adminReply = row.cells[3].innerText;
+            // Dummy reply functionality, you can implement your logic here
+            if (adminReply.trim() === '') {
+                var reply = prompt('Enter your reply:');
+                if (reply !== null && reply.trim() !== '') {
+                    row.cells[3].innerText = reply;
+                }
+            } else {
+                alert('You have already replied to this feedback.');
+            }
+        }
+    </script>
+</body>
+</html>

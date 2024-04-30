@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback System</title>
+    <style>
+        /* CSS Styles for Customer Feedback System */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('1234.jpg'); /* Add your high-quality wallpaper image */
+            background-size: cover; /* Cover the entire viewport with the background image */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+            color: #fff; /* Text color */
+        }
+
+        header {
+            background-color:blue; /* Semi-transparent background for better readability */
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px; /* Add padding to make buttons clickable */
+            border: 1px solid #fff; /* Add border for button effect */
+            border-radius: 5px; /* Add border radius for rounded corners */
+        }
+
+        nav ul li a:hover {
+            background-color: #fff; /* Change background color on hover */
+            color: #333; /* Change text color on hover */
+        }
+
+        section {
+            padding: 20px;
+            background-color:none; /* Semi-transparent white background for section */
+            border-radius: 10px; /* Rounded corners for section */
+            margin: 20px; /* Add margin for spacing */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Additional CSS for the Social Media Section */
+        #social-media {
+            display: none; /* Initially hide the social media section */
+        }
+    </style>
+    <script>
+        // JavaScript for Customer Feedback System
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to toggle the visibility of the social media section
+            function toggleSocialMedia() {
+                var socialMediaSection = document.getElementById('social-media');
+                if (socialMediaSection.style.display === 'none') {
+                    socialMediaSection.style.display = 'block';
+                } else {
+                    socialMediaSection.style.display = 'none';
+                }
+            }
+
+            // Add click event listener to the social media button
+            var socialMediaButton = document.getElementById('social-media-button');
+            socialMediaButton.addEventListener('click', toggleSocialMedia);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Customer Feedback System</h1>
+        <nav>
+            <ul>
+                <li><a href="customerfeedback.php">Get Started</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Welcome to our Feedback System</h2>
+        <p>Feel free to provide your valuable feedback. Your opinion matters to us!</p>
+        it is important to know want you want , even you have complain it is important to the society<br>
+        so it's your time to respond your feedback
+    </section>
+
+    <footer>
+        <button id="social-media-button">Toggle Social Media</button>
+        <section id="social-media">
+            <h2>Social Media</h2>
+            <p>Add your social media links here.</p>
+             <li>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.x.com" target="_blank">Twitter (X)</a>
+       <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </li>
+        </section>
+        <p>&copy; 2024 Customer Feedback System</p>
+    </footer>
+</body>
+</html>

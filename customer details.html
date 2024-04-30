@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .action-links button {
+            margin-right: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .action-links button.edit {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+
+        .action-links button.delete {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+        }
+
+        .action-links button:hover {
+            opacity: 0.8;
+        }
+
+        .action-links button.edit:hover {
+            background-color: #0056b3;
+        }
+
+        .action-links button.delete:hover {
+            background-color: #cc0000;
+        }
+
+        .input-field {
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 5px 10px;
+            width: 100%;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registered Users</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>District</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td contenteditable="true">Jean Mugabo</td>
+                <td contenteditable="true">Rwanda</td>
+                <td contenteditable="true">Kigali</td>
+                <td contenteditable="true">30</td>
+                <td contenteditable="true">Male</td>
+                <td contenteditable="true">jeanmugabo@gmail.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+            <!-- Add more rows as needed -->
+            <tr>
+                <td>2</td>
+                <td contenteditable="true">Jeanne Kubwimana</td>
+                <td contenteditable="true">Rwanda</td>
+                <td contenteditable="true">Rubavu</td>
+                <td contenteditable="true">25</td>
+                <td contenteditable="true">Female</td>
+                <td contenteditable="true">jeannekub@gmail.com.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+            <!-- Add more rows as needed -->
+            <!-- Example for 10 persons -->
+            <tr>
+                <td>3</td>
+                <td contenteditable="true">Michael pratine</td>
+                <td contenteditable="true">Canada</td>
+                <td contenteditable="true">Toronto</td>
+                <td contenteditable="true">35</td>
+                <td contenteditable="true">Male</td>
+                <td contenteditable="true">michael@gmail.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td contenteditable="true">Aline Brown</td>
+                <td contenteditable="true">Australia</td>
+                <td contenteditable="true">Sydney</td>
+                <td contenteditable="true">28</td>
+                <td contenteditable="true">Female</td>
+                <td contenteditable="true">emily@example.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td contenteditable="true">William David</td>
+                <td contenteditable="true">Germany</td>
+                <td contenteditable="true">Berlin</td>
+                <td contenteditable="true">32</td>
+                <td contenteditable="true">Male</td>
+                <td contenteditable="true">william@example.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td contenteditable="true">Sophia judith</td>
+                <td contenteditable="true">Spain</td>
+                <td contenteditable="true">Madrid</td>
+                <td contenteditable="true">27</td>
+                <td contenteditable="true">Female</td>
+                <td contenteditable="true">sophia@gmail.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td contenteditable="true">David Lee</td>
+                <td contenteditable="true">South Korea</td>
+                <td contenteditable="true">Seoul</td>
+                <td contenteditable="true">29</td>
+                <td contenteditable="true">Male</td>
+                <td contenteditable="true">david@example.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td contenteditable="true">olivier Ishimwe</td>
+                <td contenteditable="true">Rwanda</td>
+                <td contenteditable="true">Huye</td>
+                <td contenteditable="true">31</td>
+                <td contenteditable="true">male</td>
+                <td contenteditable="true">isabella@example.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td contenteditable="true">Frank Admson</td>
+                <td contenteditable="true">Kenya</td>
+                <td contenteditable="true">Nairobi</td>
+                <td contenteditable="true">26</td>
+                <td contenteditable="true">Male</td>
+                <td contenteditable="true">frankad@gmail.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td contenteditable="true">Ava Thomas</td>
+                <td contenteditable="true">France</td>
+                <td contenteditable="true">Paris</td>
+                <td contenteditable="true">33</td>
+                <td contenteditable="true">Female</td>
+                <td contenteditable="true">olivia@example.com</td>
+                <td class="action-links">
+                    <button class="edit" onclick="updateUser(this)">Update</button>
+                    <button class="delete" onclick="deleteUser(this)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function updateUser(button) {
+            // Dummy function to update user information
+            var row = button.parentNode.parentNode;
+            var cells = row.querySelectorAll('td');
+            var userData = Array.from(cells).map(cell => cell.innerText);
+            // Send userData to the backend for update
+            console.log('Updating user:', userData);
+        }
+
+        function deleteUser(button) {
+            // Dummy function to delete user
+            var row = button.parentNode.parentNode;
+            var cells = row.querySelectorAll('td');
+            var userData = Array.from(cells).map(cell => cell.innerText);
+            // Send userData to the backend for delete
+            console.log('Deleting user:', userData);
+            row.remove();
+        }
+    </script>
+</body>
+</html>

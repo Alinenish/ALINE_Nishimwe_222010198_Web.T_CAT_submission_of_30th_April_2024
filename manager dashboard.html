@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('123456.jpg'); /* Add your wallpaper image */
+            background-size: cover; /* Cover the entire viewport with the background image */
+            background-position: center center; /* Center the background image horizontally and vertically */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* Style for sections */
+        .section {
+            background-color:none; /* Semi-transparent white background */
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Style for footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Feedback Manager</h1>
+        <div class="section">
+            <h2>Dashboard</h2>
+            <a href="view feedback.html" class="button" id="viewFeedbackBtn">View Feedback</a>
+            <a href="services admin.html" class="button" id="servicesBtn">Services</a>
+            <a href="home page.html" class="button" id="settingsBtn">Logout</a>
+            <a href="customer details.html" class="button" id="customerBtn">Customer</a>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>1234 Main Street, City, Country</p>
+    </footer>
+
+    <script>
+        // JavaScript for button functionality
+        document.getElementById('viewFeedbackBtn').addEventListener('click', function() {
+            // Redirect to the view feedback page
+            window.location.href = 'view_feedback.html';
+        });
+
+        document.getElementById('generateReportsBtn').addEventListener('click', function() {
+            // Redirect to the generate reports page
+            window.location.href = 'generate_reports.html';
+        });
+
+        document.getElementById('servicesBtn').addEventListener('click', function() {
+            // Redirect to the services page
+            window.location.href = 'services.html';
+        });
+
+        document.getElementById('settingsBtn').addEventListener('click', function() {
+            // Redirect to the settings page
+            window.location.href = 'settings.html';
+        });
+
+        document.getElementById('customerBtn').addEventListener('click', function() {
+            // Redirect to the customer page
+            window.location.href = 'customer.html';
+        });
+    </script>
+</body>
+</html>
